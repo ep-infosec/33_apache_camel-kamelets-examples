@@ -1,0 +1,8 @@
+- route:
+    from:
+      uri: kamelet:timer-source?message=hello
+      steps:
+        - to:
+            uri: micrometer:counter:messages
+        - log:
+            message: ${body}

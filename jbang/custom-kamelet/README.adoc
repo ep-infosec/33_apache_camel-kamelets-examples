@@ -1,0 +1,66 @@
+== Custom Kamelet
+
+This example is using a custom Kamelet that fetches random user data.
+
+The custom kamelets can be located locally or shared on github.
+This example demonstrates how to run this in both situations.
+
+
+=== Install JBang
+
+First install JBang according to https://www.jbang.dev
+
+When JBang is installed then you should be able to run from a shell:
+
+[source,sh]
+----
+$ jbang --version
+----
+
+This will output the version of JBang.
+
+To run this example you can either install Camel on JBang via:
+
+[source,sh]
+----
+$ jbang app install camel@apache/camel
+----
+
+Which allows to run CamelJBang with `camel` as shown below.
+
+=== How to run
+
+Then you can run this example using:
+
+[source,sh]
+----
+$ camel run user.java --local-kamelet-dir=../../custom-kamelets
+----
+
+And to refer to the custom kamelets with link to github:
+
+[source,sh]
+----
+$ camel run user.java --local-kamelet-dir=https://github.com/apache/camel-kamelets-examples/tree/main/custom-kamelets
+----
+
+
+=== Run directly from github
+
+The example can also be run directly by referring to the github URL as shown:
+
+[source,sh]
+----
+$ jbang camel@apache/camel run https://github.com/apache/camel-kamelets-examples/tree/main/jbang/custom-kamelet --local-kamelet-dir=https://github.com/apache/camel-kamelets-examples/tree/main/custom-kamelets
+----
+
+
+=== Help and contributions
+
+If you hit any problem using Camel or have some feedback, then please
+https://camel.apache.org/community/support/[let us know].
+
+We also love contributors, so
+https://camel.apache.org/community/contributing/[get involved] :-)
+
+The Camel riders!
